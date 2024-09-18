@@ -1,4 +1,5 @@
 import { input } from '@inquirer/prompts'
+import { createId } from '@paralleldrive/cuid2'
 
 import { showMessage } from '../utils'
 import { goals } from '../db'
@@ -14,6 +15,7 @@ export async function createGoal() {
   }
 
   goals.push({
+    id: createId(),
     value: goal,
     checked: false,
   })
