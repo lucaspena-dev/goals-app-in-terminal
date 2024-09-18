@@ -3,6 +3,7 @@ import { select } from '@inquirer/prompts'
 import { showMessage } from './utils'
 import { createGoal } from './features/create-goal'
 import { getListGoals } from './features/get-list-goals'
+import { getListOfCompletedGoals } from './features/get-list-of-completed-goals'
 
 async function start() {
   showMessage('Bem vindo(a) ao app de metas!')
@@ -48,6 +49,7 @@ async function start() {
         break
 
       case 'completar':
+        await getListOfCompletedGoals()
         break
 
       case 'aberto':
@@ -57,7 +59,7 @@ async function start() {
         break
 
       case 'sair':
-        showMessage('Obrigado por utilizar o nosso app, até a próxima!')
+        showMessage('Obrigado por utilizar o nosso app, até a próxima! :D')
         return
     }
   }
