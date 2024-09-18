@@ -5,6 +5,7 @@ import { createGoal } from './features/create-goal'
 import { getListGoals } from './features/get-list-goals'
 import { getListOfCompletedGoals } from './features/get-list-of-completed-goals'
 import { getListOfOpenedGoals } from './features/get-list-of-opened-goals'
+import { deleteGoals } from './features/delete-goals'
 
 async function start() {
   showMessage('Bem vindo(a) ao app de metas!')
@@ -58,6 +59,7 @@ async function start() {
         break
 
       case 'deletar':
+        await deleteGoals()
         break
 
       case 'sair':
