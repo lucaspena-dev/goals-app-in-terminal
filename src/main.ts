@@ -1,6 +1,10 @@
 import { select } from '@inquirer/prompts'
 
+import { showMessage } from './utils'
+
 async function start() {
+  showMessage('Bem vindo(a) ao app de metas!')
+
   const options = await select({
     message: 'Menu:',
     choices: [
@@ -49,7 +53,7 @@ async function start() {
         break
 
       case 'sair':
-        console.log('Até a próxima!')
+        showMessage('Obrigado por utilizar o nosso app, até a próxima!')
         return
     }
   }
