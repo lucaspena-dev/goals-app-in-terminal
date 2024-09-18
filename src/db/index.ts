@@ -26,11 +26,11 @@ export async function saveGoal() {
 }
 
 export function deleteItems(itemsToDelete: string[]) {
-  itemsToDelete.forEach(item => {
+  for (const item of itemsToDelete) {
     goals = goals.filter(goal => {
-      return goal.value !== item
+      return goal.value === item
     })
-  })
+  }
 
   return
 }
