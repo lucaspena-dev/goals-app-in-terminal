@@ -5,7 +5,7 @@ import { goals } from '../db'
 
 export async function createGoal() {
   const goal = await input({
-    message: 'Digite o título da meta a ser criada.',
+    message: 'Digite o título da meta a ser criada:',
   })
 
   if (goal.length === 0) {
@@ -15,7 +15,7 @@ export async function createGoal() {
 
   goals.push({
     value: goal,
-    isChecked: false,
+    checked: false,
   })
 
   showMessage('Meta criada com sucesso!')
