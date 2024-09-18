@@ -1,0 +1,14 @@
+{
+  "name": "goals-app-in-terminal",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun src/main.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
