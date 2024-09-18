@@ -34,4 +34,7 @@ export async function getListGoals() {
       findGoal.checked = true
     }
   }
+
+  showMessage('Meta(s) marcada(s) com sucesso!')
+  return
 }
