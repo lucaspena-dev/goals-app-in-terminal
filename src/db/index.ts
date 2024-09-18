@@ -20,7 +20,7 @@ export async function loadingGoals() {
   }
 }
 
-export async function saveGoal() {
+export async function saveGoals() {
   await fs.writeFile('./src/db/goals.json', JSON.stringify(goals, null, 1))
   return
 }
