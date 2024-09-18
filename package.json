@@ -6,6 +6,7 @@
     "dev": "bun src/main.ts"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.1",
     "@types/bun": "latest"
   },
   "peerDependencies": {
