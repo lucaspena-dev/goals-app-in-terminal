@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises'
 
 type Goal = {
+  id: string
   value: string
   checked: boolean
 }
