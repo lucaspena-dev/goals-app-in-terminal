@@ -1,8 +1,8 @@
 import fs from 'node:fs/promises'
 
-export type Goal = {
+type Goal = {
   value: string
-  isChecked: string
+  isChecked: boolean
 }
 
 export let goals: Goal[] = []
