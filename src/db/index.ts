@@ -21,14 +21,14 @@ export async function loadingGoals() {
 }
 
 export async function saveGoals() {
-  await fs.writeFile('./src/db/goals.json', JSON.stringify(goals, null, 1))
+  await fs.writeFile('./src/db/goals.json', JSON.stringify(goals, null, 2))
   return
 }
 
 export function deleteItems(itemsToDelete: string[]) {
   for (const item of itemsToDelete) {
     goals = goals.filter(goal => {
-      return goal.value === item
+      return goal.value !== item
     })
   }
 
