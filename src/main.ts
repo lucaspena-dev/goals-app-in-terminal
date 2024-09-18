@@ -9,8 +9,8 @@ async function start() {
     message: 'Menu:',
     choices: [
       {
-        name: 'Cadastrar meta',
-        value: 'cadastrar',
+        name: 'Criar uma nova meta',
+        value: 'criar',
       },
       {
         name: 'Listar metas',
@@ -37,7 +37,7 @@ async function start() {
 
   while (true) {
     switch (options) {
-      case 'cadastrar':
+      case 'criar':
         break
 
       case 'listar':
