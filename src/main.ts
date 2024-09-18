@@ -1,5 +1,6 @@
 import { select } from '@inquirer/prompts'
 
+import { loadingGoals, saveGoals } from './db'
 import { showMessage } from './utils'
 import { createGoal } from './features/create-goal'
 import { getListGoals } from './features/get-list-goals'
@@ -8,9 +9,12 @@ import { getListOfOpenedGoals } from './features/get-list-of-opened-goals'
 import { deleteGoals } from './features/delete-goals'
 
 async function start() {
+  await loadingGoals()
   showMessage('Bem vindo(a) ao app de metas!')
 
   while (true) {
+    await saveGoals()
+
     const options = await select({
       message: 'Menu:',
       choices: [
