@@ -1,6 +1,7 @@
 import { select } from '@inquirer/prompts'
 
 import { showMessage } from './utils'
+import { createGoal } from './features/create-goal'
 
 async function start() {
   showMessage('Bem vindo(a) ao app de metas!')
@@ -38,6 +39,7 @@ async function start() {
   while (true) {
     switch (options) {
       case 'criar':
+        await createGoal()
         break
 
       case 'listar':
