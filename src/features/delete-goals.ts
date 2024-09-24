@@ -9,18 +9,18 @@ export async function deleteGoals() {
     return
   }
 
-  const copyOfGoals = goals.map(goal => {
+  const uncheckedGoals = goals.map(goal => {
     return goal
   })
 
-  for (let i = 0; i < copyOfGoals.length; i++) {
-    copyOfGoals[i].checked = false
+  for (let i = 0; i < uncheckedGoals.length; i++) {
+    uncheckedGoals[i].checked = false
   }
 
   const itemsToDelete = await checkbox({
     message:
       'Utilize as setas do seu teclado para navegar, "Espaço" para selecionar/desmarcar uma meta e "Enter" para prosseguir com a deleção (se a meta estiver marcada) da meta ou para voltar para o menu.',
-    choices: [...copyOfGoals],
+    choices: [...uncheckedGoals],
     instructions: false,
   })
 
