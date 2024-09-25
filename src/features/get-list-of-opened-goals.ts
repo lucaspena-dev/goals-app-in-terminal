@@ -13,6 +13,11 @@ export async function getListOfOpenedGoals() {
     return goal.checked === false
   })
 
+  if (filteredOpenedGoals.length === 0) {
+    showMessage('Você não possuí metas em aberto! :D')
+    return
+  }
+
   await select({
     message: `Metas em aberto: ${filteredOpenedGoals.length}`,
     choices: [...filteredOpenedGoals],
