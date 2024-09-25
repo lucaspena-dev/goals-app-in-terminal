@@ -1,6 +1,8 @@
-# Folders
-node_modules
+# Visual Studio Code
 .vscode
 
-# Files
+# Node
+node_modules
+
+# Database
 src/db/goals.json
